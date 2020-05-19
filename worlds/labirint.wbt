@@ -1,0 +1,236 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.5596787668412949 0.5658428865368322 0.6054597473843102 2.1009650603347256
+  position 0.4375804166183418 26.53432875747214 -1.922239707419464
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 15 15
+  appearance PBRAppearance {
+    baseColor 0.0591135 0.292439 0.31667
+    roughness 1
+    metalness 0
+  }
+}
+CardboardBox {
+  translation 1.83 0.3 -4.6
+  name "cardboard box(2)"
+}
+CardboardBox {
+  translation 0.04 0.3 -3.34
+}
+CardboardBox {
+  translation -1.7 0.3 -4.59
+  name "cardboard box(1)"
+}
+Pedestrian {
+  hidden translation_2 1.1102230246251565e-16 0.002118977165458058 0.020012018570004626
+  hidden rotation_2 -0.9999999999999999 0 0 0.10581818181804248
+  hidden translation_3 -5.551115123125783e-17 0.004008755953944815 -0.010634138800442956
+  hidden rotation_3 -0.9999999999999999 0 0 0.1154545454546567
+  hidden translation_4 -1.1102230246251565e-16 -0.004410117669030322 0.031850863399269874
+  hidden rotation_4 1 0 0 0.0865454545454853
+  hidden translation_5 0 0.004793124597313958 -0.05357078497771098
+  hidden rotation_5 1 0 0 0.2836363636362634
+  hidden translation_6 -5.551115123125783e-17 0.008062528279470654 -0.04915098614565755
+  hidden rotation_6 -1 0 0 0.5112727272727695
+  hidden translation_7 -2.7755575615628914e-17 -0.010260368965702704 -0.12834022639413106
+  hidden rotation_7 -1 0 0 0.3481818181818314
+  hidden translation_8 -2.7755575615628914e-17 -0.018832459986909522 -0.1520036358471778
+  hidden rotation_8 -1 0 0 0.5116363636364171
+  hidden translation_9 2.7755575615628914e-17 -0.2835336907643185 0.5628573657831434
+  hidden rotation_9 1 0 0 0.85436363636367
+  hidden translation_10 2.7755575615628914e-17 0.0020203354688661523 -0.03074204866194835
+  hidden rotation_10 -1 0 0 0.02636363636366577
+  hidden translation_11 -5.551115123125783e-17 -0.10295534014795757 0.18972462215398858
+  hidden rotation_11 1 0 0 0.7292727272727291
+  hidden translation_12 0 -0.49123851447928524 -0.7415246052672378
+  hidden rotation_12 -1 0 0 1.2490909090908542
+  hidden translation_13 0 -0.06415542896581372 0.3002119712917488
+  hidden rotation_13 1 0 0 0.26345454545463465
+  hidden translation_14 0 0.002991510664104302 0.058008007200712176
+  hidden rotation_14 -1 0 0 0.15709090909092782
+  translation 3.1719999999999686 1.3412727272727352 -1
+  rotation 0 1 0 1.5707963267948966
+  controllerArgs "--trajectory \"2.5 -1,7.4 -1\""
+  rightLegAngle 0.21381818181820564
+  rightLowerLegAngle 0.10945454545457324
+  rightFootAngle 0.3283636363637197
+  leftLegAngle -1.07672727272733
+  leftLowerLegAngle 1.6816363636363894
+  leftFootAngle -0.039454545454573234
+  rightArmAngle -0.24436363636374153
+  rightLowerArmAngle -0.5189090909091465
+  rightHandAngle -0.23254545454547043
+  leftArmAngle 0.42072727272741756
+  leftLowerArmAngle -0.5821818181819253
+  leftHandAngle 0.09381818181820563
+  headAngle 0.019636363636345775
+}
+Solid {
+  translation 0 0.5 7.5
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+      }
+      geometry Box {
+        size 15 1 0.1
+      }
+    }
+  ]
+  name "wall"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 0.5 -7.5
+  children [
+    USE WALL_SHAPE
+  ]
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 7.5 0.5 0
+  rotation 0 1 0 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -7.5 0.5 0
+  rotation 0 1 0 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -2.5 0.5 5
+  children [
+    DEF SHAPE_SMALLER_WALL Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 10 1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE SHAPE_SMALLER_WALL
+}
+Solid {
+  translation 2.5 0.5 3
+  children [
+    USE SHAPE_SMALLER_WALL
+  ]
+  name "solid(4)"
+  boundingObject USE SHAPE_SMALLER_WALL
+}
+Solid {
+  translation 2.5 0.5 -5
+  children [
+    USE SHAPE_SMALLER_WALL
+  ]
+  name "solid(5)"
+  boundingObject USE SHAPE_SMALLER_WALL
+}
+Solid {
+  translation -2.5 0.5 -3
+  children [
+    USE SHAPE_SMALLER_WALL
+  ]
+  name "solid(6)"
+  boundingObject USE SHAPE_SMALLER_WALL
+}
+Solid {
+  translation -2.5 0.5 1
+  rotation 0 1 0 1.5708
+  children [
+    DEF WALL_SMALLEST_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 4 1 0.1
+      }
+    }
+  ]
+  name "solid(7)"
+  boundingObject USE WALL_SMALLEST_SHAPE
+}
+Solid {
+  translation 2.5 0.5 -1
+  rotation 0 1 0 1.5708
+  children [
+    USE WALL_SMALLEST_SHAPE
+  ]
+  name "solid(8)"
+}
+DEF PIONEER_3AT Pioneer3at {
+  hidden position_0_0 0.020505061528842933
+  hidden position_0_1 0.02023281853643444
+  hidden position_0_2 0.03164470260339042
+  hidden position_0_3 0.03136683093204408
+  hidden linearVelocity_0 -1.2059858819801965e-11 -6.838031903431771e-07 -2.9556662505875753e-08
+  hidden angularVelocity_0 -1.61998420326447e-07 4.589643052470706e-13 6.588732143427234e-11
+  hidden rotation_7 -0.9999999999999999 0 0 0.020505061528835102
+  hidden linearVelocity_7 -7.286800205861175e-12 -6.621318816958345e-07 -1.8042721964480708e-08
+  hidden angularVelocity_7 -1.6204643503891114e-07 4.863120074932755e-13 6.605944626135664e-11
+  hidden rotation_8 -1 0 0 0.020232818536433203
+  hidden linearVelocity_8 -7.286649328139091e-12 -6.620928002840253e-07 -1.804278913973258e-08
+  hidden angularVelocity_8 -1.6204644943599812e-07 4.863358783113418e-13 6.605807610044988e-11
+  hidden rotation_9 -1 0 0 0.03164470260338963
+  hidden linearVelocity_9 -7.256738962913213e-12 -7.058022095313524e-07 -1.7611355607652703e-08
+  hidden angularVelocity_9 -1.6195377700449638e-07 4.861467154358538e-13 6.610824798478803e-11
+  hidden rotation_10 -1 0 0 0.03136683093204206
+  hidden linearVelocity_10 -7.2566349435732545e-12 -7.057631279392771e-07 -1.761142280093952e-08
+  hidden angularVelocity_10 -1.6195379153635935e-07 4.86139641053638e-13 6.610629196237991e-11
+  translation -0.00016335422451692311 0.10880557673984513 0.014747772513815033
+  rotation 0.8550770373839135 0.5185009549615136 0.0001408642886637741 -0.0004516664940860871
+  controller "ros"
+  controllerArgs "--name=pioneer3at"
+  extensionSlot [
+    Camera {
+      translation 0 0.17 -0.22
+      width 256
+      height 128
+      motionBlur 500
+      noise 0.02
+    }
+    Accelerometer {
+      lookupTable [
+        -39.24 -39.24 0.005
+        39.24 39.24 0.005
+      ]
+    }
+    Gyro {
+      lookupTable [
+        -50 -50 0.005
+        50 50 0.005
+      ]
+    }
+    SickLms291 {
+      translation 0 0.23 -0.136
+      noise 0.1
+    }
+    GPS {
+    }
+    InertialUnit {
+    }
+  ]
+}
